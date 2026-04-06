@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#e9c349",
+                    "secondary": "#735c00",
+                    "on-tertiary-container": "#cfd0b8",
+                    "tertiary-fixed-dim": "#c8c8b0",
+                    "on-primary-fixed": "#001d35",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#2e3132",
+                    "tertiary-fixed": "#e4e4cc",
+                    "error-container": "#ffdad6",
+                    "surface": "#f8f9fa",
+                    "on-tertiary-fixed-variant": "#474836",
+                    "on-primary-container": "#abd2ff",
+                    "on-error": "#ffffff",
+                    "primary-container": "#005b96",
+                    "surface-dim": "#d9dadb",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#9ccaff",
+                    "tertiary": "#404230",
+                    "surface-tint": "#12629d",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#191c1d",
+                    "outline": "#717781",
+                    "tertiary-container": "#585946",
+                    "surface-container-highest": "#e1e3e4",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#c1c7d1",
+                    "primary-fixed": "#d0e4ff",
+                    "inverse-primary": "#9ccaff",
+                    "on-primary-fixed-variant": "#00497a",
+                    "surface-container-low": "#f3f4f5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#745c00",
+                    "surface-container-high": "#e7e8e9",
+                    "on-tertiary-fixed": "#1b1d0e",
+                    "surface-variant": "#e1e3e4",
+                    "on-secondary-fixed": "#241a00",
+                    "background": "#f8f9fa",
+                    "surface-bright": "#f8f9fa",
+                    "secondary-container": "#fed65b",
+                    "secondary-fixed": "#ffe088",
+                    "primary": "#004370",
+                    "on-surface-variant": "#414750",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "on-background": "#191c1d",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-secondary-fixed-variant": "#574500"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Noto Serif', serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm flex justify-between items-center px-8 h-20">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-sky-900 dark:text-sky-400">menu</span>
+<span class="text-2xl font-serif text-sky-900 dark:text-sky-100 tracking-widest">MAR DA ZINHA</span>
+</div>
+<button class="text-xs font-sans uppercase tracking-widest text-sky-700 dark:text-sky-300 border-b-2 border-amber-600 transition-colors duration-300 hover:text-amber-700">RESERVE A TABLE</button>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[751px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Seafood Platter" class="w-full h-full object-cover" data-alt="Gourmet seafood platter with king prawns, oysters, and lobster on a rustic wooden table with soft coastal morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClne4MKD5U4078WR4hgs1WTFLQiGODTFjfOfeQSt_ucMq1_0JdWc2R0q1k8QFVzX4rWqdkZQH18IsLijYiteg74LD6Aur_WEJLlHarz8zcRMKqT6u1KnexF9UOGUS1rLXhzv1TxK57G9qK1rjdHJRVY_UI_VUlHnrdsffKlfak8FN1OruzRvqq6QePVfMzR5cwdHn5FasidoZUZ5Te8YxC_Thya-9by3729b3HyWnFBI7NX_qnPByH9wBaEJUUR6yYj9IHYp4EsRY"/>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/40 to-primary/80"></div>
+</div>
+<div class="relative z-10 text-center px-6">
+<h1 class="text-on-primary text-5xl md:text-7xl font-bold mb-4 tracking-tight">Mar da Zinha</h1>
+<p class="text-on-primary/90 text-lg md:text-xl font-light italic mb-10">O verdadeiro sabor do mar.</p>
+<div class="flex flex-col gap-4 max-w-xs mx-auto">
+<button class="bg-primary hover:bg-primary-container text-on-primary py-4 px-8 rounded-lg font-label uppercase tracking-widest text-sm transition-all duration-300">Ver Menu</button>
+<button class="bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container py-4 px-8 rounded-lg font-label uppercase tracking-widest text-sm transition-all duration-300">Fazer Reserva</button>
+</div>
+</div>
+</section>
+<!-- Featured Dishes (Bento-ish Grid) -->
+<section class="py-20 px-6 max-w-5xl mx-auto">
+<div class="mb-12">
+<span class="font-label text-secondary uppercase tracking-[0.2em] text-xs font-bold">Seleção do Chef</span>
+<h2 class="text-4xl text-primary mt-2">Pratos de Destaque</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up of garlic butter shrimp sizzling in a traditional pan with fresh herbs and lemon wedges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3yLLjr9eZZ9tb5hAGfbZym3XfuO6ZgloEc03Pg6IPoQhkDZBbQ7iY2qn0oUAWjZzlyM611HLDsX0vAypzirQfIzvGbwVXNuqTLvdXEQuhl1SMSygbXBqvFbFK0mwCorrwYzthv1yxVUthDzlzsL9wnydvgivHkTd3AiUHjeRh_BLS4XePrHBAmqCNkYac05eNjNuLlwgNbx0VglD40NX3LY_rUxMrENaHgWSXc8Lx8MloVpI8N9sxZ4j5vXC7tUiTr0QEdXilepk"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="text-2xl text-primary">Camarão ao Alho</h3>
+<span class="text-primary font-bold">850 MZN</span>
+</div>
+<p class="text-on-surface-variant font-light mb-6">Camarões selecionados saltados em azeite virgem, alho crocante e ervas finas.</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Grilled whole fish served with charred lemons and fresh parsley on a ceramic plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUAdKF_1C2OSiajYu_iu8jKqUTjely620xJW_eU2LJd2gWcd-PDrRkzqoKZU7aLVvOvYRkSQkIO1_qCBXdvCCqLSBQknMS3HxOxbVn2Rwtn0Ch4edFRH0sZb7BVR3R9igTytlq_9Z8chE8MEQRkvF40p6Cwy8Dkl0s3U8TMGqQIDjvRKmqqd4S-FSUjjrTXhAXvivkn6osWSNPj84sp43irNLy7pC9ZWdi_0OWpW1rg2JfEO3eeyLs2ZXctmqIH_WwJt9W7BmGOxk"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="text-2xl text-primary">Peixe Grelhado</h3>
+<span class="text-primary font-bold">750 MZN</span>
+</div>
+<p class="text-on-surface-variant font-light mb-6">Peixe fresco do dia grelhado na brasa com limão siciliano e flor de sal.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional seafood rice stew in a terracotta pot with mussels, clams, and shrimp" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLbD7GzA7eFbEpJfWqm_sibwRilfe7nvQgYyhTEdiM0aA-2aAPRd9rWv3mEEZ8R5tQcJrIrRw8OApATSNQeiKoOmHi4X6UyJCu24tBq7wwRkojU9HKoNmi7wNLtJdYgcXT6VbOLsFbCMsqIIR7cAccNCS6GFVbwB__kUnkafn5M7iPFmHjA1GwR7WkDER_EiF6blzh7khQ6-SGccxMcFNloSlZ-bD_B5DTnOWY5SPWPR_GJ3V5-FZD85QM0jbAuqI4a0HQT1B8dGk"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="text-2xl text-primary">Arroz de Marisco</h3>
+<span class="text-primary font-bold">1200 MZN</span>
+</div>
+<p class="text-on-surface-variant font-light mb-6">Arroz caldoso rico em variedades de frutos do mar e temperos tradicionais.</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group">
+<div class="h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Steamed lobster tail with melted butter sauce and fresh dill garnish on a luxury plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMNTmYv7taktXNAwqEmEc3y-5i2gmxp1tUethYGv7JV0Fppf7e-nEMtwZuR-G19usIcn-OD0b2yC2R64EmHs-Td2WOFhAm31QhJY_MXIxOXmnED7ZOdn1PpOdpjZ4Tn9nBRENHETJOqqFDKLZuMSncteug546sWe4vqaUQvV663pgA9iP_8aYnjQj7ET-n0kAkvi9iu_r3vaddWQAOuLZ0_2mvnkt8SFnwVXXZlJxSCNFe93FHagPnu49OIOSqJCCVsI7k1h7fbRM"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-baseline mb-2">
+<h3 class="text-2xl text-primary">Lagosta na Manteiga</h3>
+<span class="text-primary font-bold">1800 MZN</span>
+</div>
+<p class="text-on-surface-variant font-light mb-6">Cauda de lagosta suculenta banhada em manteiga clarificada e especiarias.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Dish of the Day (Overlapping Editorial Layout) -->
+<section class="bg-secondary-fixed/30 py-24 my-10 relative overflow-hidden">
+<div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+<div class="relative z-10 order-2 md:order-1">
+<span class="font-label text-secondary-container bg-primary px-3 py-1 text-[10px] uppercase tracking-widest inline-block mb-4">Sugestão do Dia</span>
+<h2 class="text-4xl md:text-6xl text-primary mb-6">Prato do Dia</h2>
+<p class="text-2xl text-tertiary font-headline mb-4 italic">Peixe Grelhado + Arroz de Coco + Salada</p>
+<div class="text-5xl font-bold text-primary mb-8">650 <span class="text-xl">MZN</span></div>
+<button class="border border-primary text-primary px-8 py-3 font-label uppercase tracking-widest text-xs hover:bg-primary hover:text-white transition-all">Pedir Agora</button>
+</div>
+<div class="relative order-1 md:order-2">
+<img class="rounded shadow-2xl relative z-10 w-full aspect-square object-cover" data-alt="Grilled fish fillet served with creamy coconut rice and a fresh seasonal side salad" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUvIvPq7scxK6TbxoT0M1-EN501zvYUCY0pO_HUrHa0P15eUxWYucUaLsuhskYu70lgfquEYJdrqFe0grFRFq6fEO_WzObV-kX5SysVaLfu31EtFoHCCsLU3c3BUTPOh5w_M7_NcOlcFAqo4lBFBmBwvC59Jr5ZZvIIw-lliq03m4o5-1U-MkiKe9PviunR7SeGrCVeIiEw0OVfBUDg-I5E3qYS_ySsWasORxOvGCVE8mKqe8F4MCTmHvnn5nSSSNXsCSWNUv7fqY"/>
+<div class="absolute -top-4 -right-4 w-full h-full border-2 border-secondary-fixed-dim -z-10 rounded"></div>
+</div>
+</div>
+</section>
+<!-- Weekly Promotions -->
+<section class="py-20 px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl text-primary mb-2">Promoções Semanais</h2>
+<div class="w-12 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="flex overflow-x-auto gap-6 no-scrollbar pb-8 px-4 snap-x">
+<!-- Promo 1 -->
+<div class="min-w-[280px] bg-primary text-on-primary p-8 rounded-xl snap-center flex flex-col justify-between h-[320px]">
+<div>
+<h3 class="text-2xl mb-2">Segunda do Camarão</h3>
+<p class="text-on-primary/70 text-sm">20% de desconto em todos os pratos de camarão.</p>
+</div>
+<div class="flex items-center gap-2 font-label text-secondary-container">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-xs uppercase tracking-widest">Toda Segunda</span>
+</div>
+</div>
+<!-- Promo 2 -->
+<div class="min-w-[280px] bg-surface-container-high p-8 rounded-xl snap-center flex flex-col justify-between h-[320px]">
+<div>
+<h3 class="text-2xl text-primary mb-2">Quarta do Marisco</h3>
+<p class="text-on-surface-variant text-sm">Rodízio de petiscos do mar com preço especial.</p>
+</div>
+<div class="flex items-center gap-2 font-label text-secondary">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-xs uppercase tracking-widest">Toda Quarta</span>
+</div>
+</div>
+<!-- Promo 3 -->
+<div class="min-w-[280px] bg-secondary-container p-8 rounded-xl snap-center flex flex-col justify-between h-[320px]">
+<div>
+<h3 class="text-2xl text-on-secondary-container mb-2">Sexta da Lagosta</h3>
+<p class="text-on-secondary-container/80 text-sm">Vinho branco de cortesia no pedido de lagosta.</p>
+</div>
+<div class="flex items-center gap-2 font-label text-primary">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-xs uppercase tracking-widest">Toda Sexta</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Summary -->
+<section class="py-20 bg-surface-container-low">
+<div class="max-w-4xl mx-auto px-6">
+<h2 class="text-3xl text-primary text-center mb-12">Nosso Cardápio</h2>
+<div class="grid grid-cols-1 gap-4">
+<div class="bg-surface-container-lowest p-6 rounded flex items-center justify-between hover:bg-primary hover:text-white transition-colors group cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary group-hover:text-white">restaurant_menu</span>
+<span class="font-label uppercase tracking-widest text-sm">Entradas</span>
+</div>
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded flex items-center justify-between hover:bg-primary hover:text-white transition-colors group cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary group-hover:text-white">dinner_dining</span>
+<span class="font-label uppercase tracking-widest text-sm">Pratos principais</span>
+</div>
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded flex items-center justify-between hover:bg-primary hover:text-white transition-colors group cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary group-hover:text-white">set_meal</span>
+<span class="font-label uppercase tracking-widest text-sm">Frutos do mar</span>
+</div>
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded flex items-center justify-between hover:bg-primary hover:text-white transition-colors group cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary group-hover:text-white">local_bar</span>
+<span class="font-label uppercase tracking-widest text-sm">Bebidas</span>
+</div>
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded flex items-center justify-between hover:bg-primary hover:text-white transition-colors group cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary group-hover:text-white">cake</span>
+<span class="font-label uppercase tracking-widest text-sm">Sobremesas</span>
+</div>
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Atmosphere Gallery -->
+<section class="py-20">
+<div class="px-6 mb-8 text-center">
+<h2 class="text-3xl text-primary">O Ambiente</h2>
+<p class="text-on-surface-variant font-light">Uma experiência que vai além do paladar.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-2 px-2">
+<img class="aspect-square object-cover w-full" data-alt="Interior of a luxury seafood restaurant with nautical decor, linen tablecloths, and large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4Co39styw1Ar7Co_fU_r1i0-5aN1KaTME0HRPTnwaYyfyxDGUJvydfW4QDRLO6awqW19pExmaNPKstqV9FNe4Fx1r9hUT_6-1OggcN0XE6391Ou1zQ9JghWQGn-Az_1Ypp5zW0TpJfYj1cKSXcPClkz0RguFpMViRTOlxp6v2wzcmpQhjivtB9cIj2LD3-tD5dWByKJ2UCltygGjww7byHlUvP4GslQg60FOvp7UmbTqGMqTtbJ1R9ff1ut7lR9DU5VkM3rIf08A"/>
+<img class="aspect-square object-cover w-full" data-alt="Sunlit terrace overlooking the ocean with elegantly set outdoor dining tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUOGxC83DF-Cy2kugET2jlz7LXig_IsMGdUy163loYkddOGup4vQBX5Mxa8py-HB0eieqdaey8ZExilPV8AXBmV79YvAYWys95CW_cxUXkcFJFj6lnSOca6ULUnVh_WudkHCF9IX_DEPfKeQD8m97LgbjfDq7WdcHq07j3fsRbW0QKvfbDrDheFq_jMINwxF5TgL8tMmTfzdQ1jCwAD1I9qlyn2QBFFAnmV1C9VdIZlggy7INKo924LLiCWzXmwsgqYWP-RBpybwM"/>
+<img class="aspect-square object-cover w-full" data-alt="Close up of fine dining table setting with crystal glasses and white porcelain plates" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXYfXeIs2dbwKbWjqHncj4fy8GvoS5eHkjjbl3VzgcN2iIeLWCU0ZbEq4KPglGO5nWuI_aGbxobSfEAH7glNwWJX7ycOrDk_QzxekPY7Y79d1RCLnFHD3tMFU4IZoV-v-KYeWZUORQeY-aTv9PBoxeaD_ulAIieV6iL-vjr13eJ9g3x-aQWh8e4duNTeB9O5KLodvuTAlZFL1jL8nlxdTW0pR7dnM4nPjyAuylYjwWoNIIvRPD_u2CN6WjVbGpyx03VmF1K7my6Q4"/>
+<img class="aspect-square object-cover w-full" data-alt="Professional bartender crafting a signature cocktail with fresh citrus and sea salt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZZ0ulP077gy5q_k5w7wo1H5XGHwwsXbQCpyTwGlbqb002D1Cly1kx8jWUHd-MfumZcTqeN9p1cFD7vsv07GcqxEt5LhOaP0zljMBBt7lilrphNa9suh33tAd2bqoznXnfuj0tPIyykkuAM_MlxrSiCYXam1RZqmEMVAcVPCihUu6eKFC9SNhZA7L11suwZ1zVmp6PN0j_J2weelsi-E2yRqphOo6PdQt4d7kPzoRSBMpGud8En3PK88kq5ZnFyPFwmsPkyu3B2lU"/>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-20 bg-surface">
+<div class="max-w-4xl mx-auto px-6">
+<div class="text-center mb-16">
+<span class="material-symbols-outlined text-secondary text-5xl">format_quote</span>
+<h2 class="text-3xl text-primary mt-4">O que dizem nossos clientes</h2>
+</div>
+<div class="space-y-12">
+<div class="text-center">
+<div class="flex justify-center gap-1 mb-4 text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-lg italic text-on-surface-variant leading-relaxed mb-4">"A melhor lagosta que já comi na vida. O ambiente é sofisticado mas acolhedor ao mesmo tempo."</p>
+<cite class="not-italic font-label uppercase tracking-widest text-xs text-primary">— Ricardo Silva</cite>
+</div>
+<div class="text-center">
+<div class="flex justify-center gap-1 mb-4 text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-lg italic text-on-surface-variant leading-relaxed mb-4">"Os frutos do mar são incrivelmente frescos. O serviço é impecável, digno de cinco estrelas."</p>
+<cite class="not-italic font-label uppercase tracking-widest text-xs text-primary">— Ana Paula</cite>
+</div>
+</div>
+</div>
+</section>
+<!-- Reservation Form -->
+<section class="py-24 bg-primary text-on-primary">
+<div class="max-w-2xl mx-auto px-6">
+<div class="text-center mb-12">
+<h2 class="text-4xl mb-4">Reserve sua Mesa</h2>
+<p class="text-on-primary/70">Garanta seu lugar no paraíso gastronômico.</p>
+</div>
+<form class="space-y-6">
+<div class="group border-b border-on-primary/20 focus-within:border-secondary transition-colors">
+<label class="block text-[10px] uppercase tracking-widest font-label mb-1 opacity-60">Nome Completo</label>
+<input class="bg-transparent border-none w-full p-0 py-2 focus:ring-0 placeholder:text-on-primary/20" placeholder="Como podemos lhe chamar?" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="group border-b border-on-primary/20 focus-within:border-secondary transition-colors">
+<label class="block text-[10px] uppercase tracking-widest font-label mb-1 opacity-60">Pessoas</label>
+<select class="bg-transparent border-none w-full p-0 py-2 focus:ring-0 appearance-none">
+<option class="text-on-surface">2 Pessoas</option>
+<option class="text-on-surface">4 Pessoas</option>
+<option class="text-on-surface">6 Pessoas</option>
+<option class="text-on-surface">Mesa Grande</option>
+</select>
+</div>
+<div class="group border-b border-on-primary/20 focus-within:border-secondary transition-colors">
+<label class="block text-[10px] uppercase tracking-widest font-label mb-1 opacity-60">Data</label>
+<input class="bg-transparent border-none w-full p-0 py-2 focus:ring-0 invert" type="date"/>
+</div>
+</div>
+<div class="group border-b border-on-primary/20 focus-within:border-secondary transition-colors">
+<label class="block text-[10px] uppercase tracking-widest font-label mb-1 opacity-60">Horário</label>
+<input class="bg-transparent border-none w-full p-0 py-2 focus:ring-0 invert" type="time"/>
+</div>
+<button class="w-full bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container py-5 rounded font-label uppercase tracking-[0.2em] text-xs font-bold transition-all duration-300 mt-6">Reservar Mesa</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-16 px-8 border-t border-slate-200/20">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start">
+<span class="text-xl font-serif text-sky-900 dark:text-sky-100 mb-4">MAR DA ZINHA</span>
+<p class="text-slate-500 dark:text-slate-400 font-sans text-sm uppercase tracking-widest text-center md:text-left mb-6">© 2024 Mar da Zinha. O verdadeiro sabor do mar.</p>
+<div class="flex gap-4">
+<a class="text-sky-900 dark:text-sky-400 hover:text-amber-700 transition-all" href="#">
+<span class="material-symbols-outlined">chat</span>
+</a>
+<a class="text-sky-900 dark:text-sky-400 hover:text-amber-700 transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="text-sky-900 dark:text-sky-400 hover:text-amber-700 transition-all" href="#">
+<span class="material-symbols-outlined">map</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-x-12 gap-y-4">
+<a class="text-slate-500 dark:text-slate-400 font-sans text-sm uppercase tracking-widest hover:text-sky-700 transition-all" href="#">Menu</a>
+<a class="text-slate-500 dark:text-slate-400 font-sans text-sm uppercase tracking-widest hover:text-sky-700 transition-all" href="#">Reservations</a>
+<a class="text-slate-500 dark:text-slate-400 font-sans text-sm uppercase tracking-widest hover:text-sky-700 transition-all" href="#">Location</a>
+<a class="text-slate-500 dark:text-slate-400 font-sans text-sm uppercase tracking-widest hover:text-sky-700 transition-all" href="#">Privacy Policy</a>
+</div>
+<div class="text-center md:text-right">
+<p class="text-sky-900 dark:text-sky-400 font-sans text-sm uppercase tracking-widest mb-1">Horário de Funcionamento</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs mb-4">Seg - Dom: 12:00 às 22:00</p>
+<p class="text-sky-900 dark:text-sky-400 font-sans text-sm uppercase tracking-widest mb-1">WhatsApp</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">+258 84 000 0000</p>
+</div>
+</div>
+</footer>
+</body></html>

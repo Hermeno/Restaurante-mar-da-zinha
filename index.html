@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Manrope:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#e9c349",
+                        "secondary": "#735c00",
+                        "on-tertiary-container": "#cfd0b8",
+                        "tertiary-fixed-dim": "#c8c8b0",
+                        "on-primary-fixed": "#001d35",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "tertiary-fixed": "#e4e4cc",
+                        "error-container": "#ffdad6",
+                        "surface": "#f8f9fa",
+                        "on-tertiary-fixed-variant": "#474836",
+                        "on-primary-container": "#abd2ff",
+                        "on-error": "#ffffff",
+                        "primary-container": "#005b96",
+                        "surface-dim": "#d9dadb",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#9ccaff",
+                        "tertiary": "#404230",
+                        "surface-tint": "#12629d",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "outline": "#717781",
+                        "tertiary-container": "#585946",
+                        "surface-container-highest": "#e1e3e4",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c1c7d1",
+                        "primary-fixed": "#d0e4ff",
+                        "inverse-primary": "#9ccaff",
+                        "on-primary-fixed-variant": "#00497a",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#745c00",
+                        "surface-container-high": "#e7e8e9",
+                        "on-tertiary-fixed": "#1b1d0e",
+                        "surface-variant": "#e1e3e4",
+                        "on-secondary-fixed": "#241a00",
+                        "background": "#f8f9fa",
+                        "surface-bright": "#f8f9fa",
+                        "secondary-container": "#fed65b",
+                        "secondary-fixed": "#ffe088",
+                        "primary": "#004370",
+                        "on-surface-variant": "#414750",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#edeeef",
+                        "on-background": "#191c1d",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-secondary-fixed-variant": "#574500"
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Noto Serif', serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .modal-hidden { display: none; }
+        .modal-hidden.active { display: flex; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm flex justify-between items-center px-8 h-20">
+    <div class="flex items-center gap-4">
+        <button id="menuToggle" class="material-symbols-outlined text-sky-900 dark:text-sky-400 cursor-pointer">menu</button>
+        <span class="text-2xl font-serif text-sky-900 dark:text-sky-100 tracking-widest">MAR DA ZINHA</span>
+    </div>
+    <div class="flex items-center gap-6">
+        <button id="cartBtn" class="relative cursor-pointer">
+            <span class="material-symbols-outlined text-sky-900 dark:text-sky-400">shopping_cart</span>
+            <span id="cartCount" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+        </button>
+        <button class="text-xs font-sans uppercase tracking-widest text-sky-700 dark:text-sky-300 border-b-2 border-amber-600 transition-colors duration-300 hover:text-amber-700" onclick="openReservationModal()">RESERVE A TABLE</button>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="modal-hidden fixed inset-0 z-40 bg-black/50">
+    <div class="bg-white dark:bg-slate-900 w-64 overflow-y-auto">
+        <div class="p-6 border-b flex items-center justify-between">
+            <span class="text-xl font-serif text-sky-900">Menu</span>
+            <button onclick="closeMobileMenu()" class="material-symbols-outlined">close</button>
+        </div>
+        <div class="p-4 space-y-2">
+            <button onclick="filterMenu('todos')" class="w-full text-left px-4 py-2 hover:bg-primary hover:text-white rounded transition">TODOS</button>
+            <button onclick="filterMenu('entradas')" class="w-full text-left px-4 py-2 hover:bg-primary hover:text-white rounded transition">ENTRADAS</button>
+            <button onclick="filterMenu('principais')" class="w-full text-left px-4 py-2 hover:bg-primary hover:text-white rounded transition">PRATOS PRINCIPAIS</button>
+            <button onclick="filterMenu('frutos')" class="w-full text-left px-4 py-2 hover:bg-primary hover:text-white rounded transition">FRUTOS DO MAR</button>
+            <button onclick="filterMenu('bebidas')" class="w-full text-left px-4 py-2 hover:bg-primary hover:text-white rounded transition">BEBIDAS</button>
+            <button onclick="filterMenu('sobremesas')" class="w-full text-left px-4 py-2 hover:bg-primary hover:text-white rounded transition">SOBREMESAS</button>
+        </div>
+    </div>
+</div>
+
+<!-- Hero Section -->
+<section class="relative h-[751px] flex items-center justify-center overflow-hidden pt-20">
+    <div class="absolute inset-0 z-0">
+        <img alt="Seafood Platter" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClne4MKD5U4078WR4hgs1WTFLQiGODTFjfOfeQSt_ucMq1_0JdWc2R0q1k8QFVzX4rWqdkZQH18IsLijYiteg74LD6Aur_WEJLlHarz8zcRMKqT6u1KnexF9UOGUS1rLXhzv1TxK57G9qK1rjdHJRVY_UI_VUlHnrdsffKlfak8FN1OruzRvqq6QePVfMzR5cwdHn5FasidoZUZ5Te8YxC_Thya-9by3729b3HyWnFBI7NX_qnPByH9wBaEJUUR6yYj9IHYp4EsRY"/>
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/40 to-primary/80"></div>
+    </div>
+    <div class="relative z-10 text-center px-6">
+        <h1 class="text-on-primary text-5xl md:text-7xl font-bold mb-4 tracking-tight">Mar da Zinha</h1>
+        <p class="text-on-primary/90 text-lg md:text-xl font-light italic mb-10">O verdadeiro sabor do mar.</p>
+        <div class="flex flex-col gap-4 max-w-xs mx-auto">
+            <button onclick="scrollToMenu()" class="bg-primary hover:bg-primary-container text-on-primary py-4 px-8 rounded-lg font-label uppercase tracking-widest text-sm transition-all duration-300">Ver Menu</button>
+            <button onclick="openReservationModal()" class="bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container py-4 px-8 rounded-lg font-label uppercase tracking-widest text-sm transition-all duration-300">Fazer Reserva</button>
+        </div>
+    </div>
+</section>
+
+<!-- Menu Section -->
+<section id="menuSection" class="py-20 px-6 max-w-6xl mx-auto">
+    <div class="mb-12 text-center">
+        <span class="font-label text-secondary uppercase tracking-[0.2em] text-xs font-bold">Nosso Cardápio</span>
+        <h2 class="text-4xl text-primary mt-2 mb-8">Pratos Disponíveis</h2>
+        
+        <!-- Filtro -->
+        <div class="flex flex-wrap justify-center gap-3 mb-8">
+            <button onclick="filterMenu('todos')" class="px-6 py-2 bg-primary text-white rounded-full uppercase text-xs tracking-wider hover:bg-primary-container transition category-btn active" data-category="todos">Todos</button>
+            <button onclick="filterMenu('entradas')" class="px-6 py-2 border border-primary text-primary rounded-full uppercase text-xs tracking-wider hover:bg-primary hover:text-white transition category-btn" data-category="entradas">Entradas</button>
+            <button onclick="filterMenu('principais')" class="px-6 py-2 border border-primary text-primary rounded-full uppercase text-xs tracking-wider hover:bg-primary hover:text-white transition category-btn" data-category="principais">Principais</button>
+            <button onclick="filterMenu('frutos')" class="px-6 py-2 border border-primary text-primary rounded-full uppercase text-xs tracking-wider hover:bg-primary hover:text-white transition category-btn" data-category="frutos">Frutos do Mar</button>
+            <button onclick="filterMenu('bebidas')" class="px-6 py-2 border border-primary text-primary rounded-full uppercase text-xs tracking-wider hover:bg-primary hover:text-white transition category-btn" data-category="bebidas">Bebidas</button>
+            <button onclick="filterMenu('sobremesas')" class="px-6 py-2 border border-primary text-primary rounded-full uppercase text-xs tracking-wider hover:bg-primary hover:text-white transition category-btn" data-category="sobremesas">Sobremesas</button>
+        </div>
+    </div>
+
+    <!-- Menu Items Grid -->
+    <div id="menuGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Items carregados dinamicamente -->
+    </div>
+</section>
+
+<!-- Cart Modal -->
+<div id="cartModal" class="modal-hidden fixed inset-0 z-50 bg-black/50 items-center justify-center">
+    <div class="bg-white dark:bg-slate-900 rounded-lg w-full max-w-md max-h-[80vh] overflow-auto p-6">
+        <div class="flex justify-between items-center mb-6 sticky top-0 bg-white dark:bg-slate-900 pb-4">
+            <h2 class="text-2xl text-primary">Carrinho</h2>
+            <button onclick="closeCart()" class="material-symbols-outlined">close</button>
+        </div>
+        
+        <div id="cartItems" class="space-y-4 mb-6">
+            <!-- Items carregados dinamicamente -->
+        </div>
+        
+        <div class="border-t pt-4 space-y-2 mb-6">
+            <div class="flex justify-between">
+                <span>Subtotal:</span>
+                <span id="subtotal">0 MZN</span>
+            </div>
+            <div class="flex justify-between font-bold text-lg">
+                <span>Total:</span>
+                <span id="cartTotal">0 MZN</span>
+            </div>
+        </div>
+
+        <div class="space-y-3">
+            <button onclick="checkoutMpesa()" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-bold uppercase tracking-widest flex items-center justify-center gap-2 transition">
+                <span class="material-symbols-outlined">payment</span>
+                Pagar com M-Pesa/Emola
+            </button>
+            <button onclick="closeCart()" class="w-full bg-gray-300 hover:bg-gray-400 text-gray-800 py-3 rounded-lg font-bold uppercase tracking-widest transition">
+                Continuar Comprando
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Reservation Modal -->
+<div id="reservationModal" class="modal-hidden fixed inset-0 z-50 bg-black/50 items-center justify-center">
+    <div class="bg-white dark:bg-slate-900 rounded-lg w-full max-w-md p-6">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl text-primary">Reserve sua Mesa</h2>
+            <button onclick="closeReservationModal()" class="material-symbols-outlined">close</button>
+        </div>
+        
+        <form id="reservationForm" onsubmit="submitReservation(event)" class="space-y-4">
+            <div>
+                <label class="block text-xs uppercase tracking-widest font-bold mb-2">Nome Completo</label>
+                <input type="text" name="name" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" placeholder="Seu nome">
+            </div>
+            
+            <div>
+                <label class="block text-xs uppercase tracking-widest font-bold mb-2">Email</label>
+                <input type="email" name="email" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" placeholder="seu@email.com">
+            </div>
+
+            <div>
+                <label class="block text-xs uppercase tracking-widest font-bold mb-2">Telefone</label>
+                <input type="tel" name="phone" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" placeholder="+258 84 000 0000">
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+                <div>
+                    <label class="block text-xs uppercase tracking-widest font-bold mb-2">Nº Pessoas</label>
+                    <select name="guests" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary">
+                        <option value="1">1 Pessoa</option>
+                        <option value="2" selected>2 Pessoas</option>
+                        <option value="4">4 Pessoas</option>
+                        <option value="6">6 Pessoas</option>
+                        <option value="8">8+ Pessoas</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="block text-xs uppercase tracking-widest font-bold mb-2">Data</label>
+                    <input type="date" name="date" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs uppercase tracking-widest font-bold mb-2">Horário</label>
+                <input type="time" name="time" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary">
+            </div>
+
+            <div>
+                <label class="block text-xs uppercase tracking-widest font-bold mb-2">Observações</label>
+                <textarea name="notes" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" placeholder="Alergias, preferências..." rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-bold uppercase tracking-widest hover:bg-primary-container transition">
+                Confirmar Reserva
+            </button>
+        </form>
+    </div>
+</div>
+
+<!-- Payment Modal -->
+<div id="paymentModal" class="modal-hidden fixed inset-0 z-50 bg-black/50 items-center justify-center">
+    <div class="bg-white dark:bg-slate-900 rounded-lg w-full max-w-md p-6">
+        <h2 class="text-2xl text-primary mb-6">Escolha Método de Pagamento</h2>
+        
+        <div class="space-y-4">
+            <button onclick="payWithMpesa()" class="w-full border-2 border-green-600 p-4 rounded-lg hover:bg-green-50 transition flex items-center gap-3">
+                <div class="text-3xl">📱</div>
+                <div class="text-left">
+                    <div class="font-bold">M-Pesa</div>
+                    <div class="text-xs text-gray-500">*120# ou App</div>
+                </div>
+            </button>
+
+            <button onclick="payWithEmola()" class="w-full border-2 border-blue-600 p-4 rounded-lg hover:bg-blue-50 transition flex items-center gap-3">
+                <div class="text-3xl">💳</div>
+                <div class="text-left">
+                    <div class="font-bold">Emola</div>
+                    <div class="text-xs text-gray-500">Via App</div>
+                </div>
+            </button>
+
+            <button onclick="closePaymentModal()" class="w-full bg-gray-300 hover:bg-gray-400 py-3 rounded-lg font-bold text-gray-800 transition">
+                Cancelar
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div id="successModal" class="modal-hidden fixed inset-0 z-50 bg-black/50 items-center justify-center">
+    <div class="bg-white dark:bg-slate-900 rounded-lg p-8 text-center max-w-sm">
+        <div class="text-5xl mb-4">✅</div>
+        <h2 class="text-2xl text-primary mb-2">Pedido Confirmado!</h2>
+        <p id="successMessage" class="text-gray-600 mb-6">Seu pedido foi enviado com sucesso.</p>
+        <button onclick="closeSuccessModal()" class="w-full bg-primary text-white py-3 rounded-lg font-bold uppercase tracking-widest hover:bg-primary-container transition">
+            Fechar
+        </button>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-primary text-on-primary w-full py-16 px-8 border-t border-primary-container/20 mt-20">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="flex flex-col items-center md:items-start">
+            <span class="text-xl font-serif text-on-primary mb-4">MAR DA ZINHA</span>
+            <p class="text-on-primary/80 font-sans text-sm uppercase tracking-widest text-center md:text-left mb-6">© 2024 Mar da Zinha. O verdadeiro sabor do mar.</p>
+            <div class="flex gap-4">
+                <a class="text-on-primary hover:text-secondary-fixed transition-all cursor-pointer">
+                    <span class="material-symbols-outlined">chat</span>
+                </a>
+                <a class="text-on-primary hover:text-secondary-fixed transition-all cursor-pointer">
+                    <span class="material-symbols-outlined">share</span>
+                </a>
+                <a class="text-on-primary hover:text-secondary-fixed transition-all cursor-pointer">
+                    <span class="material-symbols-outlined">map</span>
+                </a>
+            </div>
+        </div>
+        <div class="text-center md:text-right">
+            <p class="text-on-primary font-sans text-sm uppercase tracking-widest mb-1">Horário de Funcionamento</p>
+            <p class="text-on-primary/80 text-xs mb-4">Seg - Dom: 12:00 às 22:00</p>
+            <p class="text-on-primary font-sans text-sm uppercase tracking-widest mb-1">WhatsApp Restaurante</p>
+            <p class="text-on-primary/80 text-xs mb-4">+258 84 000 0077</p>
+            <p class="text-on-primary font-sans text-sm uppercase tracking-widest mb-1">WhatsApp Desenvolvedor</p>
+            <a href="https://wa.me/258842059826" target="_blank" class="text-secondary-fixed hover:text-secondary-fixed-dim transition-all font-bold text-xs">+258 84 205 9826</a>
+        </div>
+    </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
