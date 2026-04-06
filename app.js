@@ -593,7 +593,7 @@ function payWithMpesa() {
         timestamp: new Date().toISOString()
     };
     
-    fetch('http://localhost:3000/api/orders', {
+    fetch('https://restaurante-mar-da-zinha.onrender.com/api/orders', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -625,7 +625,7 @@ function payWithEmola() {
         timestamp: new Date().toISOString()
     };
     
-    fetch('http://localhost:3000/api/orders', {
+    fetch('https://restaurante-mar-da-zinha.onrender.com/api/orders', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -672,7 +672,7 @@ function submitReservation(event) {
         timestamp: new Date().toISOString()
     };
     
-    fetch('http://localhost:3000/api/reservations', {
+    fetch('https://restaurante-mar-da-zinha.onrender.com/api/reservations', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
