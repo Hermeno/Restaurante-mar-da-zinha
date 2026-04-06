@@ -14,7 +14,7 @@ const menuItems = [
         name: "Tábua de Queijos e Enchidos",
         category: "entradas",
         price: 550,
-        image: "https://images.unsplash.com/photo-1536599018102-c8d36b6f6e38?w=400",
+        image: "https://images.pexels.com/photos/821365/pexels-photo-821365.jpeg?w=400",
         description: "Seleção premium de queijos locais e enchidos importados"
     },
     {
@@ -22,7 +22,7 @@ const menuItems = [
         name: "Ostras Fritas",
         category: "entradas",
         price: 600,
-        image: "https://images.unsplash.com/photo-1599599810694-b5ac4dd64135?w=400",
+        image: "https://images.pexels.com/photos/5737439/pexels-photo-5737439.jpeg?w=400",
         description: "Ostras empanadas e fritas, servidas com molho de limão"
     },
     {
@@ -30,7 +30,7 @@ const menuItems = [
         name: "Calamares à Romana",
         category: "entradas",
         price: 500,
-        image: "https://images.unsplash.com/photo-1599599810531-b9c7b4c3f5f1?w=400",
+        image: "https://images.pexels.com/photos/4551832/pexels-photo-4551832.jpeg?w=400",
         description: "Anéis de lula fritos crocantes com limão siciliano"
     },
     
@@ -64,7 +64,7 @@ const menuItems = [
         name: "Bife Grelhado",
         category: "principais",
         price: 950,
-        image: "https://images.unsplash.com/photo-1504674900927-2f521f798e7b?w=400",
+        image: "https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?w=400",
         description: "Bife de primeira qualidade grelhado no carvão com sal grosso"
     },
     
@@ -85,292 +85,7 @@ const menuItems = [
         image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDMNTmYv7taktXNAwqEmEc3y-5i2gmxp1tUethYGv7JV0Fppf7e-nEMtwZuR-G19usIcn-OD0b2yC2R64EmHs-Td2WOFhAm31QhJY_MXIxOXmnED7ZOdn1PpOdpjZ4Tn9nBRENHETJOqqFDKLZuMSncteug546sWe4vqaUQvV663pgA9iP_8aYnjQj7ET-n0kAkvi9iu_r3vaddWQAOuLZ0_2mvnkt8SFnwVXXZlJxSCNFe93FHagPnu49OIOSqJCCVsI7k1h7fbRM",
         description: "Cauda de lagosta suculenta banhada em manteiga clarificada e especiarias"
     },
-    {
-        id: 11,
-        name: "Moqueca de Peixe",
-        category: "frutos",
-        price: 900,
-        image: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400",
-        description: "Peixe fresco em molho de leite de coco com pimentão e cebola"
-    },
-    {
-        id: 12,
-        name: "Platea de Frutos do Mar",
-        category: "frutos",
-        price: 2200,
-        image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400",
-        description: "Seleção premium com camarão, lagosta, peixe e mariscos variados"
-    },
-    
-    // Bebidas
-    {
-        id: 13,
-        name: "Vinho Branco Seco",
-        category: "bebidas",
-        price: 250,
-        image: "https://images.unsplash.com/photo-1510812704763-8f07ffd8ac28?w=400",
-        description: "Vinho branco refrescante - taça de 150ml"
-    },
-    {
-        id: 14,
-        name: "Cerveja Premium",
-        category: "bebidas",
-        price: 120,
-        image: "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=400",
-        description: "Cerveja gelada importada - garrafa"
-    },
-    {
-        id: 15,
-        name: "Água de Coco",
-        category: "bebidas",
-        price: 80,
-        image: "https://images.unsplash.com/photo-1553530666-ba953a5b3cb7?w=400",
-        description: "Água de coco fresca servida na casca"
-    },
-    {
-        id: 16,
-        name: "Suco Natural",
-        category: "bebidas",
-        price: 100,
-        image: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400",
-        description: "Suco fresco de frutas do dia - escolha a sua"
-    },
-    
-    // Sobremesas
-    {
-        id: 17,
-        name: "Pudim de Leite Condensado",
-        category: "sobremesas",
-        price: 180,
-        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400",
-        description: "Pudim cremoso com calda de caramelo"
-    },
-    {
-        id: 18,
-        name: "Chocolate Quente com Broa",
-        category: "sobremesas",
-        price: 150,
-        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400",
-        description: "Chocolate quente artesanal com pão doce"
-    },
-    {
-        id: 19,
-        name: "Semifrio de Sapataria",
-        category: "sobremesas",
-        price: 220,
-        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400",
-        description: "Sobremesa gelada com doce de leite e amendoim"
-    },
-    {
-        id: 20,
-        name: "Sorveteria Artesanal",
-        category: "sobremesas",
-        price: 160,
-        image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400",
-        description: "Sorvete artesanal - escolha seus sabores favoritos"
-    },
-    
-    // Mais Entradas
-    {
-        id: 21,
-        name: "Atun Fresco com Abacate",
-        category: "entradas",
-        price: 580,
-        image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400",
-        description: "Fatias finas de atum fresco com abacate e molho asiático"
-    },
-    {
-        id: 22,
-        name: "Gambas à Ajillo",
-        category: "entradas",
-        price: 520,
-        image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400",
-        description: "Camarões salteados em azeite, alho e pimenta"
-    },
-    {
-        id: 23,
-        name: "Mexilhões ao Vinho Branco",
-        category: "entradas",
-        price: 490,
-        image: "https://images.unsplash.com/photo-1580822261290-991b38693d1b?w=400",
-        description: "Mexilhões frescos cozidos em vinho branco e ervas"
-    },
-    {
-        id: 24,
-        name: "Ceviche de Peixe",
-        category: "entradas",
-        price: 610,
-        image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400",
-        description: "Peixe fresco marinado em limão e especiarias peruanas"
-    },
-    
-    // Mais Pratos Principais
-    {
-        id: 25,
-        name: "Salmão Grelhado",
-        category: "principais",
-        price: 920,
-        image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400",
-        description: "Filé de salmão com manteiga de ervas e vegetais grelhados"
-    },
-    {
-        id: 26,
-        name: "Peixe Inteiro Grelhado",
-        category: "principais",
-        price: 850,
-        image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400",
-        description: "Peixe inteiro fresco do dia grelhado com limão e sal"
-    },
-    {
-        id: 27,
-        name: "Moqueca de Marisco",
-        category: "principais",
-        price: 1050,
-        image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400",
-        description: "Mix de frutos do mar em molho de leite de coco e dendê"
-    },
-    {
-        id: 28,
-        name: "Bifinho ao Molho Madeira",
-        category: "principais",
-        price: 1100,
-        image: "https://images.unsplash.com/photo-1504674900927-2f521f798e7b?w=400",
-        description: "Bife mignon em molho madeira com batata palha"
-    },
-    {
-        id: 29,
-        name: "Peixe à Portuguesa",
-        category: "principais",
-        price: 890,
-        image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400",
-        description: "Peixe grelhado com batata, ovos e molho à portuguesa"
-    },
-    
-    // Mais Frutos do Mar
-    {
-        id: 30,
-        name: "Camarões Gigantes",
-        category: "frutos",
-        price: 1400,
-        image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400",
-        description: "Camarões gigantes grelhados com manteiga de alho"
-    },
-    {
-        id: 31,
-        name: "Sopa de Marisco",
-        category: "frutos",
-        price: 950,
-        image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400",
-        description: "Sopa cremosa com camarão, peixe e mariscos variados"
-    },
-    {
-        id: 32,
-        name: "Cataplana de Frutos do Mar",
-        category: "frutos",
-        price: 1600,
-        image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400",
-        description: "Especialidade portuguesa com frutos do mar cozidos a vapor"
-    },
-    {
-        id: 33,
-        name: "Lula à Alhó",
-        category: "frutos",
-        price: 850,
-        image: "https://images.unsplash.com/photo-1580822261290-991b38693d1b?w=400",
-        description: "Lula grelhada salteada em azeite e alho"
-    },
-    {
-        id: 34,
-        name: "Espetada de Camarão",
-        category: "frutos",
-        price: 1200,
-        image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400",
-        description: "Espetadas de camarão grelhadas com frutas tropicais"
-    },
-    
-    // Mais Bebidas
-    {
-        id: 35,
-        name: "Vinho Tinto Premium",
-        category: "bebidas",
-        price: 320,
-        image: "https://images.unsplash.com/photo-1510812704763-8f07ffd8ac28?w=400",
-        description: "Vinho tinto reserva - taça de 150ml"
-    },
-    {
-        id: 36,
-        name: "Espumante Bruto",
-        category: "bebidas",
-        price: 280,
-        image: "https://images.unsplash.com/photo-1510812704763-8f07ffd8ac28?w=400",
-        description: "Espumante seco refrescante - taça de 150ml"
-    },
-    {
-        id: 37,
-        name: "Cocktail da Casa",
-        category: "bebidas",
-        price: 200,
-        image: "https://images.unsplash.com/photo-1514432324607-2e467f4af445?w=400",
-        description: "Cocktail especial à base de cachaça e frutas tropicais"
-    },
-    {
-        id: 38,
-        name: "Caipirinha",
-        category: "bebidas",
-        price: 180,
-        image: "https://images.unsplash.com/photo-1514432324607-2e467f4af445?w=400",
-        description: "Caipirinha de cachaça com limão e açúcar"
-    },
-    {
-        id: 39,
-        name: "Refrigerante Premium",
-        category: "bebidas",
-        price: 90,
-        image: "https://images.unsplash.com/photo-1554866585-e0bba7ae62ca?w=400",
-        description: "Refrigerante importado - garrafa"
-    },
-    
-    // Mais Sobremesas
-    {
-        id: 40,
-        name: "Tiramisú Italiano",
-        category: "sobremesas",
-        price: 240,
-        image: "https://images.unsplash.com/photo-1571877227200-a0332ff43bb3?w=400",
-        description: "Sobremesa italiana com café e mascarpone"
-    },
-    {
-        id: 41,
-        name: "Brownie de Chocolate",
-        category: "sobremesas",
-        price: 200,
-        image: "https://images.unsplash.com/photo-1607920591413-264ec2b0ae23?w=400",
-        description: "Brownie quente com sorvete de baunilha"
-    },
-    {
-        id: 42,
-        name: "Pavê de Doce de Leite",
-        category: "sobremesas",
-        price: 210,
-        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400",
-        description: "Camadas de biscoito doce e leite condensado"
-    },
-    {
-        id: 43,
-        name: "Mousse de Fruta",
-        category: "sobremesas",
-        price: 190,
-        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400",
-        description: "Mousse cremosa de manga ou morango"
-    },
-    {
-        id: 44,
-        name: "Profiteroles",
-        category: "sobremesas",
-        price: 250,
-        image: "https://images.unsplash.com/photo-1571877227200-a0332ff43bb3?w=400",
-        description: "Pequenas bolas de massa com calda de chocolate quente"
-    }
+
 ];
 
 // Variáveis globais
